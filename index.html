@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Joey adoption form</title>
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+  <!-- partial:index.partial.html -->
+  <section id="contact">
+    <div class="contact-box">
+      <div class="contact-links">
+        <h2 class="title-1">Joey adoption form</h2>
+        <p class="para-1">Joey is an incredibly joyful and a friendly pet. He loves to play and never misses the
+          opportunity for a good walk. Joey is looking for new forever home. Do you wanna adopt Joey?
+          Fill up this form and we will contact you regarding this ASAP.</p>
+        <div class="link-to-btns">
+          <button onclick="location.href='https://photos.app.goo.gl/uSqeUTFLQ34u8NTSA'">Joey's vaccination</button>
+          <button onclick="location.href='https://photos.app.goo.gl/YSB9UD9CgjmcHrmU6'">Joey's deworming</button>
+          <button onclick="location.href='https://photos.app.goo.gl/uFvhVxTEj9t2iY1U7'">Joey's Pictures</button>
+        </div>
+        <div class="links">
+          <img src="./assets/img/1.jpg" alt="">
+        </div>
+        <ul>
+          <li>Proper health with all vaccinations done and regular vet checkups - record available.</li>
+          <li>Diet - mix of kibbles and home food (rice curd chicken etc.)</li>
+        </ul>
+        <p class="para-1"><b>Reason for putting Joey up for adoption:</b><br>
+          As much as it pains us to even think about parting ways with our lovely Joey, we are unable to give him the
+          attention he deserves due to hectic nature of my new job. When we got Joey, I was working for a European
+          startup remotely (and it seemed like a stable long-term position at that time). So it was easier to take care
+          of Joey as I was always working from home. But due to the recent unexpected effects of Russia-Ukraine war, the
+          startup lost its funding and I have now had to switch to a new job which is very demanding and requires me to
+          be in office (or travelling) for most part.</p>
+        <p class="para-2">We are getting a lot of requests for Joey's adoption. Fill up the form fast to adopt him
+          first.</p>
+      </div>
+      <div class="contact-form-wrapper">
+
+        <!-- <form action="https://api.sheetmonkey.io/form/3DkY9w9KQVBnkVvLwRNfez" method="post"> -->
+        <!-- Put HTML input fields in here and see how they fill up your sheet -->
+        <!-- <label>
+          Example Field: <input type="text" name="name" required /></label>
+        <input type="hidden" name="Created" value="x-sheetmonkey-current-date-time" />
+        <input type="submit" value="Submit" />
+      </form> -->
+
+
+        <form id="frm" action="https://api.sheetmonkey.io/form/3DkY9w9KQVBnkVvLwRNfez" method="post">
+          <div class="form-item">
+            <label>Name:</label>
+            <input type="text" id="name" name="name" placeholder="Please enter name">
+          </div>
+          <div class="form-item">
+            <label>Phone number:</label>
+            <input type="text" name="phone" placeholder="Please enter phone number">
+          </div>
+          <div class="form-item">
+            <label>Pin Code:</label>
+            <input type="text" name="pin_code" placeholder="Please enter pin code">
+          </div>
+          <div class="form-item">
+            <label>Please tick mark Previous or current dog owner?</label>
+            <div class="check-divs">
+              <label for="prev_dog">
+                <input id="prev_dog" class="dog-det" type="radio" name="dog_owner" value="previous" checked>&nbsp;I
+                previously owned a pet or pets.
+              </label>
+              <!-- <span>&nbsp;&nbsp;</span> -->
+              <label for="curr_dog">
+                <input id="curr_dog" class="dog-det" type="radio" name="dog_owner" value="current">&nbsp;I currently own
+                a pet or pets.
+              </label>
+              <!-- <span>&nbsp;&nbsp;</span> -->
+              <label for="non_dog">
+                <input id="non_dog" class="dog-det" type="radio" name="dog_owner" value="none">&nbsp;None
+              </label>
+            </div>
+          </div>
+          <div class="form-item">
+            <label>Please provide details regarding breed age etc in text section below.</label>
+            <textarea class="" rows="4" name="pet_detail" placeholder="Please share you pet description"></textarea>
+          </div>
+          <div class="form-item">
+            <label>Any other questions or comments you may enter here.</label>
+            <textarea class="" rows="4" name="any_other" placeholder="Please share your query"></textarea>
+          </div>
+          <!-- <div class="form-item">
+            <label>Reason for adopting.</label>
+            <textarea class="" rows="4" name="adp_reason" placeholder="Please enter reason for adopting."></textarea>
+          </div> -->
+
+          <!-- <div class="form-item">
+          <label>Link to photo video folder.</label>
+          <input type="text" name="link_photo" placeholder="Paste the URL" required>
+        </div>
+        <div class="form-item">
+          <label>Link to vaccination record.</label>
+          <input type="text" name="link_vaccination" placeholder="Paste the URL" required>
+        </div>
+        <div class="form-item">
+          <label>Link to deworming record.</label>
+          <input type="text" name="link_deworming" placeholder="Paste the URL" required>
+        </div> -->
+          <!-- <div class="form-item">
+          <label>Age of your pet</label>
+          <input type="date" name="age_pet" id="birthday" name="birthday" class="age-of-pet-date">
+        </div> -->
+          <div class="form-item daily-twice">
+            <label>Average spend (including food, vet visits etc.) is 5-10k per month. </label>
+            <div class="check-div">
+              <input id="afford" type="checkbox" name="afford_dog" value="previous" style="width: auto;">
+              <label for="afford">
+                &nbsp;Yes I can comfortably afford the same.
+              </label>
+            </div>
+            <label id="afford_dog-error" class="error" for="afford_dog"></label>
+          </div>
+          <div class="form-item daily-twice">
+            <label>Two times walking is necessary.</label>
+            <div class="check-div">
+              <input id="walk" type="checkbox" name="walk_dog" value="previous" style="width: auto;">
+              <label for="walk">
+                &nbsp;Yes, I will walk the pet daily twice.
+              </label>
+            </div>
+            <label id="walk_dog-error" class="error" for="walk_dog"></label>
+          </div>
+          <!-- <div class="form-item">
+            <div class="check-div">
+              <input id="health" type="checkbox" name="health_dog" value="previous" style="width: auto;">
+              <label for="health">
+                &nbsp;Proper health with all vaccinations done and regular vet checkups - record available.
+              </label>
+            </div>
+          </div> -->
+          <!-- <div class="form-item">
+            <div class="check-div">
+              <input id="diet" type="checkbox" name="diet_dog" value="previous" style="width: auto;">
+              <label for="diet">
+                &nbsp;
+                Diet - mix of kibbles and home food (rice curd chicken etc.)
+              </label>
+            </div>
+          </div> -->
+          <input type="hidden" name="Created" value="x-sheetmonkey-current-date-time" />
+          <!-- <input type="submit" value="Submit" /> -->
+          <button class="submitbtns">Submit</button>
+        </form>
+      </div>
+    </div>
+  </section>
+  <!-- partial -->
+
+  <!-- <script>
+    function validateForm() {
+  let x = document.forms["myForm"]["fname"].value;
+  if (x == "") {
+    alert("Name must be filled out");
+    return false;
+  }
+}
+  </script> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js" integrity="sha512-UdIMMlVx0HEynClOIFSyOrPggomfhBKJE28LKl8yR3ghkgugPnG6iLfRfHwushZl1MOPSY6TsuBDGPK2X4zYKg==" crossorigin="anonymous"></script>
+<script>
+$(document).ready(function(){
+
+	jQuery.validator.addMethod("validate_email", function(value, element) {
+	if (/^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/.test(value)) {
+	return true;
+	} else {
+	return false;
+	}
+	}, "Please enter a valid email address.");
+
+
+
+  jQuery.validator.addMethod("mobileonly", function(value, element) {
+	return this.optional(element) ||  /^[+]?\d+$/.test(value.toLowerCase());
+	}, "Enter valid number");
+
+
+
+$('#frm').validate({
+rules:{
+
+name:{
+required:true,
+minlength:2,
+maxlength:20,
+},
+
+phone:{
+required:true,
+minlength:10,
+maxlength:10,
+mobileonly:true,
+},
+
+
+pin_code:{
+required:true,
+minlength:6,
+mobileonly:true,
+},
+
+
+dog_owner:{
+required:true,
+},
+
+
+afford_dog:{
+required:true,
+},
+
+
+walk_dog:{
+required:true,
+},
+
+
+},
+messages:{
+//   walk_dog:{
+// required:"hiii",
+// },
+},
+});
+});
+</script>
+
+</body>
+
+</html>
